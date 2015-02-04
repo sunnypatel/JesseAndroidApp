@@ -6,20 +6,17 @@ import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.LoaderManager.LoaderCallbacks;
 import android.content.BroadcastReceiver;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.CursorLoader;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.Loader;
-import android.content.ServiceConnection;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.AsyncTask;
 
 import android.os.Build;
 import android.os.Bundle;
-import android.os.IBinder;
 import android.provider.ContactsContract;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -32,22 +29,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.jesseme.jessememobileandroidapplication.services.APIService;
-
-import org.apache.http.HttpResponse;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.ByteArrayEntity;
-import org.apache.http.entity.StringEntity;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.params.BasicHttpParams;
-import org.apache.http.params.HttpConnectionParams;
-import org.apache.http.params.HttpParams;
-import org.json.JSONObject;
-
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
 
 
 /**
@@ -153,14 +134,14 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 //        }
         if (!isPhoneValid(phone_number)) {
             mPhoneNumberView.setError(getString(R.string.error_invalid_email));
-            focusView = mPhoneNumberView;
+//            focusView = mPhoneNumberView;
             cancel = true;
         }
 
         if (cancel) {
             // There was an error; don't attempt login and focus the first
             // form field with an error.
-            focusView.requestFocus();
+//            focusView.requestFocus();
         } else {
             // Show a progress spinner, and kick off a background task to
             // perform the user login attempt.
@@ -237,13 +218,13 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
     @Override
     public void onLoadFinished(Loader<Cursor> cursorLoader, Cursor cursor) {
-        List<String> emails = new ArrayList<String>();
-        cursor.moveToFirst();
-        while (!cursor.isAfterLast()) {
-            emails.add(cursor.getString(ProfileQuery.ADDRESS));
-            cursor.moveToNext();
-        }
-
+//        List<String> emails = new ArrayList<String>();
+//        cursor.moveToFirst();
+//        while (!cursor.isAfterLast()) {
+//            emails.add(cursor.getString(ProfileQuery.ADDRESS));
+//            cursor.moveToNext();
+//        }
+//
 //        addEmailsToAutoComplete(emails);
     }
 

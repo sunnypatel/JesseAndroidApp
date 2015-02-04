@@ -6,13 +6,17 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin" tools:context=".LoginActivity">
 
-    <!-- the tools:layout is only used for the UI rendoring tool used in IDEs. not in the application-->
-    <fragment
-        android:name="com.jesseme.jessememobileandroidapplication.controller.menu.MenuFragment"
-        android:id="@+id/menu_fragment"
-        android:layout_width="fill_parent"
+    <ScrollView android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="0dp">
+
+    <com.jesseme.jessememobileandroidapplication.view.menu.MenuView android:id="@+id/menu_container" android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        tools:layout="@layout/fragment_menu" />
+        android:orientation="vertical">
+
+    </com.jesseme.jessememobileandroidapplication.view.menu.MenuView>
+
+    </ScrollView>
 
 </LinearLayout>
 

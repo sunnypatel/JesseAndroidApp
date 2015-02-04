@@ -1,0 +1,8 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <declare-styleable name="MenuItemView"
+        android:layout_rowWeight=".3"
+        ></declare-styleable>
+
+</resources>

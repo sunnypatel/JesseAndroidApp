@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.jesseme.jessememobileandroidapplication.services.APIService;
+import com.jesseme.jessememobileandroidapplication.services.OrderingService;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -15,6 +16,7 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        startService(new Intent(getApplicationContext(), OrderingService.class));
         startService(new Intent(getApplicationContext(), APIService.class));
         startActivity(new Intent(getApplicationContext(), MenuActivity.class));
         startActivity(new Intent(getApplicationContext(), LoginActivity.class));

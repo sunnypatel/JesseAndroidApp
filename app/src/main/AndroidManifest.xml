@@ -46,11 +46,17 @@
         />
 
         <service
+            android:name=".services.OrderingService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="com.jesseme.jessememobileandroidapplication"
+            />
+
+        <service
             android:name=".services.LocationService"
             android:enabled="true"
             android:exported="true"
             android:permission="com.jesseme.jessememobileandroidapplication"
             />
     </application>
-
 </manifest>
